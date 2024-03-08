@@ -3,6 +3,10 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
+    defaultCommandTimeout: 4000,
+    pageLoadTimeout: 30000,
+    viewportWidth: 1280,
+    viewportHeight: 720,
     setupNodeEvents(on, config) {
       on('file:preprocessor', cucumber())
      }, 
